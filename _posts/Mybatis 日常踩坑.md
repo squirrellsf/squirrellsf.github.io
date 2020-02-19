@@ -3,7 +3,7 @@ layout: post
 categories: Java
 title: "MyBatis 踩坑记录"
 tags: [Java, MyBatis]
-date-string: SEPTEMBER 3, 2019
+date: 2019-09-03
 ---
 # MyBatis 日常踩坑
 *注解版MyBatis获取自增主键*
