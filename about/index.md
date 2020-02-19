@@ -4,13 +4,14 @@ title: About
 ---
 
 <center>
-<img src="/images/headImg.jpeg">
+<img src="/images/luffyHat.png">
 </center>
 
 <p>
 <center>
     <ul class="navigation-bar">
-       <li><a href="https://www.github.com/squirrellsf"><i class='fa fa-github-alt'></i></a></li> 
+       <li><a href="https://www.github.com/squirrellsf"><i class='fa fa-github'></i></a></li> 
+       <li><a href="mailto:393727510@qq.com" target="blank"><i class="fa fa-envelope"></i></a></li>
     </ul>
 </center>
 </p>
