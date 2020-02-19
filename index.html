@@ -6,7 +6,11 @@ layout: post-index
     
     <!-- POST FEATURED IMAGE -->
     <div class="featured-image">
-    <img src="{{ post.featured-image}}" style="width:100%">
+    {% if post.featured-image == "" or post.featured-image == nil %}
+        <img src="/images/default-header.png", style="width:100%">
+    {% else %}
+        <img src="{{ post.featured-image }}" style="width:100%">
+    {% endif %}
     </div>
 
     <!-- POST TITLE -->
@@ -19,14 +23,26 @@ layout: post-index
         </h3>
     </header>
 
+
+            <!-- POST BYLINE -->
+            <div class="post-byline">
+                <i>{{ post.venue }}</i> <br>
+                {{ post.author }} <br>
+                <a href="{{ post.link-download }}">{{ post.link-text }}</a>
+            </div><br>
+            <!-- POST DATE -->
+            <div class="post-date">
+                {{ post.date | date: "%B %-d, %Y" }}
+            </div>
+
     <!-- POST CONTENT -->
-<!--     <div class="entry-content">
-        {{ post.content }}
-    </div> -->
-    
+    <hr>
+    <div class="entry-content">
+        {{ post.excerpt }}
+    </div> 
+
     <!--- DIVIDING LINE -->
     <hr>
-    
     <!-- POST TAGS -->
     <div class="inline-tags">
         <span>
@@ -35,17 +51,7 @@ layout: post-index
         {% endfor %}
         </span>
     </div>
-    
-    <br>
-    
-    <!-- POST DATE -->
-    <div class="post-date">
-        <span class="entry-date date published updated">
-            <time datetime="{{ post.date | date_to_xmlschema }}">
-                <a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a>
-            </time>
-        </span>
-    </div>
+
     
 </article>
 {% endfor %}
@@ -54,4 +60,4 @@ layout: post-index
 <center>
 {% include pagination.html %}
 </center>
-    </div>
+</div>
