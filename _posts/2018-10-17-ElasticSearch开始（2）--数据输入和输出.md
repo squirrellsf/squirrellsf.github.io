@@ -34,7 +34,7 @@ date-string: 2018-10-17
 ①index          
 索引，文档在哪儿存放。一个 索引 应该是因共同的特性被分组到一起的文档集合，这个名字必须小写，不能以下划线开头，不能包含逗号。         
 ②type  
-文档表示的对象类别。
+文档表示的对象类别。  
 ③id     
 文档唯一标识。ID 是一个字符串， 当它和 index 以及 type 组合就可以唯一确定 Elasticsearch 中的一个文档。可以提供自定义的id值，或者让 index API 自动生成。
   
@@ -118,7 +118,7 @@ DELETE {index}/{type}/{id}
 ```
 ##### 文档的部分更新
 <HTTP谓词：POST>.  
-<API:_update>. 
+\<API:_update>. 
    update 请求最简单的一种形式是接收文档的一部分作为 doc 的参数， 它只是与现有的文档进行合并。对象被合并到一起，覆盖现有的字段，增加新的字段。  
 ###### 增加字段
 ```
@@ -161,8 +161,8 @@ DELETE {index}/{type}/{id}
  }
 ```
 ##### 取回多个文档
-<API:_mget>. 
-<参数：docs>. 
+\<API:_mget>    
+<参数：docs>   
    mget API 要求有一个 docs 数组作为参数，每个 元素包含需要检索文档的元数据， 包括index、type 和id 。如果想检索一个或者多个特定的字段，那么你可以通过_source 参数来指定这些字段的名字：
 ```
  GET /_mget
@@ -183,8 +183,8 @@ DELETE {index}/{type}/{id}
  }
 ```
 ##### 代价较小的批量操作
-<API:bulk>. 
-   bulk API 允许在单个步骤中进行多次 create 、index 、 update 或 delete 请求。 如果你需要索引一个数据流比如日志事件，它可以排队和索引数百或数千批次。
+\<API:bulk>.   
+   bulk允许在单个步骤中进行多次 create 、index 、 update 或 delete 请求。 如果你需要索引一个数据流比如日志事件，它可以排队和索引数百或数千批次。
 格式：
  { action: { metadata }} <!--指定哪一文档做什么操作  action:"create","index","update","delete"-->
  { request body        }
