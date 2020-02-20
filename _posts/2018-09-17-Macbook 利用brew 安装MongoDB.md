@@ -7,8 +7,11 @@ date-string: 2018-09-17
 ---
 # Macbook 利用brew 安装MongoDB
 MongoDB是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。
-Macbook安装MongoDB的方法有三种：1.手动解压安装；2.homebrew安装；3.下载安装包。
-由于macbook强大的命令行功能，因此我采用了homebrew安装MongoDB，具体步骤如下：
+Macbook安装MongoDB的方法有三种：
+* 手动解压安装；
+* homebrew安装；
+* 下载安装包。    
+由于UNIX内核的命令行功能，因此采用了homebrew安装MongoDB，具体步骤如下：
 1. 首先更新homebrew
 ```
    brew update
