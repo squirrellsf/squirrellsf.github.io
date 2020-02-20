@@ -1,8 +1,15 @@
-# 用注解形式使用mybatis（非springboot框架）
-之前用Mybatis一直都是用的mapper.xml文件，在文件里边写sql语句来进行使用的。这样的方式很繁琐，sql语句也不够直观。之前和师兄交流的时候他提到过在公司基本都用的注解的形式配置，所以想尝试用注解方式来使用MyBatis。当然也遇到了很多坑，在此把流程和坑给记录一下，以后遇到相似问题也可以有个参考。
+---
+layout: post
+categories: Java
+title: "注解方式使用MyBatis"
+tags: [Java, MyBatis]
+date-string: 2019-07-03
+---
+# 用注解形式使用MyBatis（非springboot框架）
+之前用MyBatis一直都是用的mapper.xml文件，在文件里边写sql语句来进行使用的。这样的方式很繁琐，sql语句也不够直观。之前和师兄交流的时候他提到过在公司基本都用的注解的形式配置，所以想尝试用注解方式来使用MyBatis。当然也遇到了很多坑，在此把流程和坑给记录一下，以后遇到相似问题也可以有个参考。
 
-1. 配置mybatis-config.xml 
-  使用Mybatis，首先需要配置mybatis-config.xml。
+1. 配置MyBatis-config.xml 
+  使用MyBatis，首先需要配置MyBatis-config.xml。
   文件的内容如下:
   ![](media/15621270135396/15621299218077.jpg)
   需要注意的是，在configuration标签下的子节点是有顺序的。比如，如果将<environment>放到<properties>之前，则会报错：
