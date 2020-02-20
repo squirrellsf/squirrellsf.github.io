@@ -1,0 +1,20 @@
+# MongoDB
+**JAVA使用MongoDB**
+> MongoClient mongoClient = new MongoClient("localhost",27017);//连接客户端
+> MongoDatabase mongoDatabase = mongoClient.getDatabase("");//连接某一数据库
+> MongoCollection<DBObject> collection = mongoDatabase.getCollection("",DBObject.class);//连接某一个集合
+
+**集合的遍历**
+① collection.find():返回集合中的所有文档（DBObject）
+> MongoCollection<DBObject> collection = mongoDatabase.getCollection("",DBObject.class);
+> for(DBObject dbObject:colletion.find()){
+> String str = dbObject.toString();
+> }
+
+从MongoDB中获取文档内容，并进行接下来的一系列操作的基本思路是：
+①取出DBObject对象；
+②对DBObject对象进行操作。
+
+！！！如果json中有list，转换成BasicDBList进行操作
+
+
